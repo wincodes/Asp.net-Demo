@@ -1,0 +1,23 @@
+﻿@model IEnumerable<MVCDemo.Models.Employee> 
+
+@{
+    ViewBag.Title = "Employee Details";
+}
+
+<h2>Employee Details</h2>
+<table class="table-responsive" style="font-family: Arial">
+    <tr>
+        <td style="padding: 10px;"><b>Name</b></td>
+        <td style="padding: 10px;"><b>Gender</b></td>
+        <td style="padding: 10px;"><b>City</b></td>
+    </tr>
+    @foreach (MVCDemo.Models.Employee details in Model)
+    {
+        <tr>
+            <td style="padding: 10px;">@details.Name</td>
+            <td style="padding: 10px;">@details.Gender</td>
+            <td style="padding: 10px;">@details.City</td>
+        </tr>
+    }
+</table>
+
